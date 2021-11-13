@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const morgan = require('morgan')
-const cors = require(`cors`)
+const cors = require('cors')
 const bodyparser = require('body-parser')
 
 app.use(morgan('dev'))
