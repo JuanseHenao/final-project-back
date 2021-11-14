@@ -8,7 +8,7 @@ Methods.getFibonacci = (req,res) => {
         for (let i = 2; i < cant; i++) {
             nums[i] = nums[i - 2] + nums[i - 1];
         }
-        res.status(200).json({status:"correct", nums})
+        res.status(200).json({status:"correct", nums:nums})
     }else {
         res.status(400).json({status:"fail", response:"Error al calcular"})
     }
@@ -22,7 +22,7 @@ Methods.getFactorial = (req,res) => {
         for(var j = num; j > 1 ; j = j-1 ){
             fact = fact*j;
         }
-        res.status(200).json({status:"correct", fact})
+        res.status(200).json({status:"correct", fact:fact})
     }else {
         res.status(400).json({status:"fail", response:"Error al calcular"})
     }
@@ -30,16 +30,16 @@ Methods.getFactorial = (req,res) => {
 }
 
 Methods.getArpertri = (req,res) => {
-    var base = req.headers['base']
-    var altura = req.headers['altura']
     var lado1 = req.headers['lado1']
     var lado2 = req.headers['lado2']
+    var lado3 = req.headers['lado3']
 
-    if(base !== undefined && base > 0 && altura !== undefined && lado1 !== undefined && lado1 > 0 && lado2 !== undefined && lado2 > 0 && altura > 0 && !isNaN(base) && !isNaN(altura) && !isNaN(lado1) && !isNaN(lado2)){
-        var area = base*altura/2
-        var perim = base+lado1+lado2
+    if(lado3 !== undefined && lado3 > 0 && lado1 !== undefined && lado1 > 0 && lado2 !== undefined && lado2 > 0 && !isNaN(lado3) && !isNaN(lado1) && !isNaN(lado2)){
+        var perim = lado3+lado1+lado2
+        var s = perim/2
+        var area = Math.sqrt(s*(s-lado1)*(s-lado2)*(s-lado3))
 
-        res.status(200).json({status:"correct", area, perim})
+        res.status(200).json({status:"correct", area:area, perim:perim})
     }else {
         res.status(400).json({status:"fail", response:"Error al calcular"})
     }
@@ -67,7 +67,7 @@ Methods.getArperec = (req,res) => {
         var area = base*altura
         var perim = base*2+altura*2
 
-        res.status(200).json({status:"correct", area, perim})
+        res.status(200).json({status:"correct", area:area, perim:perim})
     }else {
         res.status(400).json({status:"fail", response:"Error al calcular"})
     }
