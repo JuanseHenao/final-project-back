@@ -35,7 +35,7 @@ Methods.getArpertri = (req,res) => {
     var lado3 = req.headers['lado3']
 
     if(lado3 !== undefined && lado3 > 0 && lado1 !== undefined && lado1 > 0 && lado2 !== undefined && lado2 > 0 && !isNaN(lado3) && !isNaN(lado1) && !isNaN(lado2)){
-        var perim = lado3+lado1+lado2
+        var perim = parseInt(lado1)+parseInt(lado2)+parseInt(lado3)
         var s = perim/2
         var area = Math.sqrt(s*(s-lado1)*(s-lado2)*(s-lado3))
 
