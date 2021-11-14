@@ -1,4 +1,4 @@
-const {Router} = requier('express')
+const {Router} = require('express')
 const route = Router()
 const controller = require('../controllers/methods.controller')
 

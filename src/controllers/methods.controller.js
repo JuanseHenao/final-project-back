@@ -52,7 +52,7 @@ Methods.getArpercir = (req,res) => {
         var area = Math.PI*Math.pow(radio,2)
         var perim = 2*Math.PI*radio
 
-        res.status(200).json({status:"correct", area, perim})
+        res.status(200).json({status:"correct", area:area, perim:perim})
     }else {
         res.status(400).json({status:"fail", response:"Error al calcular"})
     }
