@@ -1,7 +1,7 @@
 const Methods = {}
 
 Methods.getFibonacci = (req,res) => {
-    var cant = req.headers('cantidad')
+    var cant = req.headers['cantidad']
     let nums = [0,1]
 
     if(cant !== undefined && cant > 0 && !isNaN(cant)){
@@ -15,7 +15,7 @@ Methods.getFibonacci = (req,res) => {
 }
 
 Methods.getFactorial = (req,res) => {
-    var num = req.headers('numero')
+    var num = req.headers['numero']
     var fact = 1
 
     if(num !== undefined && num > 0 && !isNaN(num)){
