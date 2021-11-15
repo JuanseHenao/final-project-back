@@ -45,7 +45,7 @@ describe("GET Fibonacci", ()=> {
             .expect(400, done)
     })
 
-}).timeout(15000)
+}).timeout(10000)
 
 //Pruebas Unitarias de Factorial
 
@@ -101,7 +101,7 @@ describe("GET Factorial", ()=> {
             .expect(400, done)
     })
 
-}).timeout(15000)
+}).timeout(10000)
 
 //Pruebas Unitarias de Área y Perímetro Triángulo
 
@@ -297,7 +297,7 @@ describe("GET Area perimetro triangulo", ()=> {
             .expect(400, done)
     })
 
-}).timeout(15000)
+}).timeout(10000)
 
 //Pruebas Unitarias de Área y Perímetro Círculo
 
@@ -353,7 +353,7 @@ describe("GET Area y Perimetro Circulo", ()=> {
             .expect(400, done)
     })
 
-}).timeout(15000)
+}).timeout(10000)
 
 //Pruebas Unitarias de Área y Perímetro Rectángulo
 
@@ -429,4 +429,4 @@ describe("GET Area perimetro rectangulo", ()=> {
             .expect(400, done)
     })
 
-}).timeout(15000)
+}).timeout(10000)
