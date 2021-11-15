@@ -30,9 +30,9 @@ Methods.getFactorial = (req,res) => {
 }
 
 Methods.getArpertri = (req,res) => {
-    var lado1 = req.headers['lado1']
-    var lado2 = req.headers['lado2']
-    var lado3 = req.headers['lado3']
+    var lado1 = parseInt(req.headers['lado1'])
+    var lado2 = parseInt(req.headers['lado2'])
+    var lado3 = parseInt(req.headers['lado3'])
 
     if(lado3 !== undefined && lado3 > 0 && lado1 !== undefined && lado1 > 0 && lado2 !== undefined && lado2 > 0 && !isNaN(lado3) && !isNaN(lado1) && !isNaN(lado2) && (lado1+lado3) > lado2 && (lado1+lado2) > lado3 && (lado2+lado3) > lado1 ){
         var perim = parseInt(lado1)+parseInt(lado2)+parseInt(lado3)

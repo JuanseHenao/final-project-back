@@ -249,15 +249,16 @@ describe("GET Area perimetro triangulo", ()=> {
             .expect(400, done)
     })
     it("No cumple ley de desigualdad 1", (done) => {
-        var lado1 = 4;
-        var lado2 = 4;
-        var lado3 = 9;
+        var lado1 = 5;
+        var lado2 = 5;
+        var lado3 = 11;
         request(app)
             .get("/api/arpertri")
             .set("accept", "application/json")
             .set("lado1", lado1)
             .set("lado2", lado2)
-            .set("lado3", lado3)            .expect("Content-Type", /json/)
+            .set("lado3", lado3)
+            .expect("Content-Type", /json/)
             .expect({status: "fail", response: "Error al calcular"})
             .expect(400, done)
     })
