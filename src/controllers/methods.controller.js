@@ -23,8 +23,11 @@ Methods.getFactorial = (req,res) => {
             fact = fact*j;
         }
         res.status(200).json({status:"correct", fact:fact})
+    }else if(num == 0){
+        res.status(200).json({status:"correct", fact:1})
     }else {
         res.status(400).json({status:"fail", response:"Error al calcular"})
+
     }
 
 }
