@@ -18,7 +18,7 @@ Methods.getFactorial = (req,res) => {
     var num = req.headers['numero']
     var fact = 1
 
-    if(num !== undefined && num > 0 && !isNaN(num)){
+    if(num !== undefined && num > 0 && !isNaN(num) && num <= 170){
         for(var j = num; j > 1 ; j = j-1 ){
             fact = fact*j;
         }
